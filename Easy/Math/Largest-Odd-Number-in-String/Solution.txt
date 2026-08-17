@@ -6,11 +6,8 @@ public:
             if (digit % 2==1){
                 string ans = num.substr(0,i+1);
                 return ans;
-                break;
             }
-            else continue;
         }
-        return "";
-        
+        return "";   
     }
 };
