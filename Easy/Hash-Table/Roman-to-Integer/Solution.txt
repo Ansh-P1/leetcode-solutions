@@ -11,13 +11,11 @@ public:
         list['M' - 'A'] = 1000;
         int ans=0;
         for (int i=0; i<s.size(); i++){
-            if (i==s.size()-1){
-                ans += list[s[i]-'A'];
+            int curr = list[s[i]-'A'];
+            if (i+1<s.size() && curr< list[s[i+1]-'A'] ){
+                ans -= curr;
             }
-            else if (list[s[i]- 'A'] < list[s[i+1]-'A']){
-                ans -= list[s[i]-'A'];   
-            }
-            else ans += list[s[i]-'A'];
+            else ans += curr;
         }
         return ans;
     }
