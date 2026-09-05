@@ -7,8 +7,7 @@ public:
         while (ss>>word){
             words.push_back(word);
         }
-        string ans = words[(words.size())-1];
-        return ans.size();
+        return words[(words.size())-1].size();
         
     }
 };
