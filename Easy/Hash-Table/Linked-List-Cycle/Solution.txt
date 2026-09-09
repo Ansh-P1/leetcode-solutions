@@ -1,4 +1,4 @@
-    /**
+/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -9,18 +9,16 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        unordered_set<ListNode*> seen;
-        ListNode* temp = head;
-        while(temp != NULL){
-            ///int a = temp->val;
-            if (seen.count(temp)){
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while(fast != NULL && fast-> next != NULL){
+            slow = slow->next;
+            fast = fast->next->next;
+            if (slow == fast){
                 return true;
             }
-            else {
-                seen.insert(temp);
-            }
-            temp = temp->next;
         }
-        return false; 
+        return false;
+        
     }
 };
