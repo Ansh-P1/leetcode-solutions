@@ -1,0 +1,41 @@
+# [Subsets](https://leetcode.com/problems/subsets/)
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
+
+**Topics:** Array, Backtracking, Bit Manipulation
+
+---
+
+Given an integer array `nums` of **unique** elements, return _all possible_ _subsets_ _(the power set)_.
+
+The solution set **must not** contain duplicate subsets. Return the solution in **any order**.
+
+ 
+
+**Example 1:**
+
+```
+Input: nums = [1,2,3]
+Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+```
+
+**Example 2:**
+
+```
+Input: nums = [0]
+Output: [[],[0]]
+```
+
+ 
+
+**Constraints:**
+
+	- `1 <= nums.length <= 10`
+
+	- `-10 <= nums[i] <= 10`
+
+	- All the numbers of `nums` are **unique**.
+
+---
+
+*Synced automatically by **GetLeet** — inspired by [LeetSync](https://github.com/LeetSync/LeetSync), the original LeetCode → GitHub sync extension. 🙏*
