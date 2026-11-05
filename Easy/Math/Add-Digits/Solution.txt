@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int solve (int num){
+        if (num<10){
+            return num;
+        }
+        int sum =0;
+        int x= num;
+        while(x>0){
+            sum += x%10;
+            x /= 10;
+        }
+        num = sum;
+        return solve(num);
+    }
+    int addDigits(int num) {
+        return solve(num);
+    }
+};
